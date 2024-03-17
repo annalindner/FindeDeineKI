@@ -1,6 +1,6 @@
 # FindeDeineKI
 
-Dieses ist eine Webanwendung die im Zusammenhang mit der Bachelorarbeit: "Einsatz und Nutzen von KI-Anwendungen im Bildungswesen" entstanden ist. Diese ermöglicht es Benutzern, KI-Anwendungen basierend auf ihrer Zugehörigkeit auszuwählen und Informationen zu jedem Modell anzuzeigen. Zusätzlich können KI-Anwendugen in einer Datenbank einpflegt werden.
+Dies ist eine Webanwendung die im Zusammenhang mit der Bachelorarbeit: "Einsatz und Nutzen von KI-Anwendungen im Bildungswesen" entstanden ist. Diese ermöglicht es Benutzern, KI-Anwendungen basierend auf ihrer Zugehörigkeit auszuwählen und Informationen zu jedem Modell anzuzeigen. Zusätzlich können KI-Anwendugen in einer Datenbank einpflegt werden.
 
 
 
