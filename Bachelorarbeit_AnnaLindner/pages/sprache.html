@@ -1,0 +1,88 @@
+<!-- HTML-Dokument für die KI-Anwendungen im  Bereich Sprache -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Meta-Tags für die Darstellung auf verschiedenen Geräten -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8" />
+    <!-- Titel der Seite -->
+    <title>Sprache</title>
+    <!-- Verknüpfung mit dem externen CSS-Stylesheet -->
+    <link rel="stylesheet" href="styles/styleUnderPage.css" />
+    <!-- Verknüpfung mit Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Hauptnavigation -->
+    <div class="top">
+      <nav>
+        <div class="nav-links" id="navLinks">
+          <!-- Links zur Startseite -->
+          <ul>
+            <li><a href="index.html">Startseite</a></li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Kopfzeile der Seite -->
+      <header>
+        <!-- Überschrift der Kopfzeile -->
+        <div id="header-text"><h3>Finde die beste KI-Anwendung im Bereich Sprache</h3></div>
+        <!-- Suchfeld in der Kopfzeile -->
+        <div id="header-search">
+          <input type="search" id="suche" placeholder=" Suche..." oninput="filterData()" />
+        </div>
+      </div>
+    <!-- Bereich für den Inhalt der Seite -->
+    <section id="content">
+      <!-- Hier werden die Daten aus der Datenbank geladen -->
+    </section>
+    <!-- Fußzeile der Seite -->
+    <footer></footer>
+  </body>
+</html>
+
+<!-- JavaScript-Code für die dynamische Datenanzeige und die Filterfunktion -->
+<script>
+  // Verwendung von XMLHttpRequest, um eine Anfrage an den Express-Server zu senden
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', '/getData', true);
+  xhr.onload = function() {
+    if (this.status === 200) {
+      // Verarbeitung der Daten und Anzeige auf der HTML-Seite
+      var data = JSON.parse(this.responseText);
+      var html = '';
+      for (var i = 0; i < data.length; i++) {
+        // Überprüfen, ob die KI zur Kategorie "Sprache" gehört
+        if (data[i].zugehoerigkeit.includes('Sprache')) {
+          // Erstellen von HTML-Elementen für jeden Datensatz
+          html += '<div class="block">';
+          html += '<h4>' + data[i].name + '</h4>';
+          html += '<p>' + data[i].beschreibung + '</p>';
+          html += '<p>Preis: ' + data[i].preis + '</p>';
+          html += '<p>Link: ' + data[i].link + '</p>';
+          // Überprüfen, ob eine Quelle vorhanden ist und fügen sie bei Bedarf hinzu
+          if (data[i].quelle) { 
+            html += '<p>Quelle: ' + data[i].quelle + '</p>';
+          }
+          html += '</div>';
+        }
+      }
+      // Einfügen des generierten HTML-Codes in den Bereich "content"
+      document.getElementById('content').innerHTML = html;
+    }
+  };
+  // Senden der XMLHttpRequest-Anfrage
+  xhr.send();
+ // JavaScript-Funktion zur Filterung der angezeigten Daten basierend auf der Eingabe im Suchfeld
+ function filterData() {
+    var input = document.getElementById("suche");
+    var filter = input.value.toUpperCase();
+    var divs = document.getElementsByClassName("block");
+    for (var i = 0; i < divs.length; i++) {
+      if (divs[i].textContent.toUpperCase().indexOf(filter) > -1) {
+        divs[i].style.display = "";
+      } else {
+        divs[i].style.display = "none";
+      }
+    }
+  }
+</script>

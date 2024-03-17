@@ -1,0 +1,152 @@
+<!-- HTML-Dokument um KI-Anwendungen hinzuzufügen -->
+<!DOCTYPE html>
+  <head>
+    <!-- Meta-Tags für die Darstellung auf verschiedenen Geräten -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"/>
+    <!-- Titel der Seite -->
+    <title>Add AI</title>
+    <!-- Verknüpfung mit dem externen CSS-Stylesheet -->
+    <link rel="stylesheet" href="styles/styleNewEntry.css" />
+    <!-- Verknüpfung mit Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Hauptnavigation -->
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <ul>
+          <!-- Link zur Startseite -->
+          <li><a href="index.html">Startseite</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Kopfzeile der Seite -->
+    <header>
+      <!-- Überschrift in der Kopfzeile -->
+      <div id="header-text"><h3>Füge eine Ki hinzu</h3></div>
+    </header>
+    <section>
+      <!-- Container für das Hinzufügen einer KI -->
+      <div class="add-ai-container">
+        <!-- Formular zum Hinzufügen einer KI in die Datenbank-->
+        <form id="add-ai-form" action="/add_ai" method="post">
+          <h2>Füge eine KI hinzu</h2>
+          <!-- Eingabefeld für den KI-Namen -->
+          <label for="aiName">KI Name:</label>
+          <input type="text" id="aiName" name="aiName" required />
+          <!-- Eingabefeld für den Link zur KI -->
+          <label for="aiLink">Link:</label>
+          <input type="text" id="aiLinK" name="aiLink" required />
+          <!-- Checkboxen für die Kategorien -->
+          <label for="aiZugehoerigkeit">Kategorie:</label>
+          <div class="checkboxes">
+            <div class="checkbox-column">
+              <!-- Feedback -->
+              <div class="checkbox-container">
+                <label for="aiZugehoerigkeit">Feedback</label>
+                <input
+                  type="checkbox"
+                  id="aiZugehoerigkeit1"
+                  name="aiZugehoerigkeit"
+                  value="Feedback"
+                />
+              </div>
+              <!-- Schreibprozess -->
+              <div class="checkbox-container">
+                <label for="aiZugehoerigkeit1">Schreibprozess</label>
+                <input
+                  type="checkbox"
+                  id="aiZugehoerigkeit2"
+                  name="aiZugehoerigkeit"
+                  value="Schreibprozess"
+                />
+              </div>
+              <!-- Chatbot -->
+              <div class="checkbox-container">
+                <label for="aiZugehoerigkeit2">Chatbot</label>
+                <input
+                  type="checkbox"
+                  id="aiZugehoerigkeit3"
+                  name="aiZugehoerigkeit"
+                  value="Chatbot"
+                />
+              </div>
+              <!-- Sprache -->
+              <div class="checkbox-container">
+                <label for="aiZugehoerigkeit3">Sprache</label>
+                <input
+                  type="checkbox"
+                  id="aiZugehoerigkeit4"
+                  name="aiZugehoerigkeit"
+                  value="Sprache"
+                />
+              </div>
+            </div>
+            <div class="checkbox-column">
+              <!-- Unterrichtsvorbereitung -->
+              <div class="checkbox-container">
+                <label for="aiZugehoerigkeit4">Unterrichtsvorbereitung</label>
+                <input
+                  type="checkbox"
+                  id="aiZugehoerigkeit5"
+                  name="aiZugehoerigkeit"
+                  value="Aufgabe"
+                />
+              </div>
+              <!-- Technik -->
+              <div class="checkbox-container">
+                <label for="aiZugehoerigkeit5">Technik</label>
+                <input
+                  type="checkbox"
+                  id="aiZugehoerigkeit6"
+                  name="aiZugehoerigkeit"
+                  value="Technik"
+                />
+              </div>
+              <!-- Naturwissenschaften -->
+              <div class="checkbox-container">
+                <label for="aiZugehoerigkeit6">Naturwissenschaften</label>
+                <input
+                  type="checkbox"
+                  id="aiZugehoerigkeit7"
+                  name="aiZugehoerigkeit"
+                  value="Naturwissenschaften"
+                />
+              </div>
+              <!-- Bewertung -->
+              <div class="checkbox-container">
+                <label for="aiZugehoerigkeit7">Bewertung</label>
+                <input
+                  type="checkbox"
+                  id="aiZugehoerigkeit8"
+                  name="aiZugehoerigkeit"
+                  value="Bewertung"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Eingabefeld für den Preis der KI -->
+          <label for="aiPreis">Preis</label>
+          <input type="text" id="aiPreis" name="aiPreis" required />
+          <!-- Eingabefeld für die Quelle der KI -->
+          <label for="aiQuelle">Quelle</label>
+          <input type="text" id="aiOuelle" name="aiQuelle" />
+          <!-- Eingabefeld für die Beschreibung der KI -->
+          <label for="aiBeschreibung">Beschreibung:</label>
+          <textarea
+            id="aiBeschreibung"
+            name="aiBeschreibung"
+            rows="4"
+            required
+          ></textarea>
+          <!-- Button zum Hinzufügen der KI -->
+          <button type="submit">KI hinzufügen</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Meta-Tags für Zeichencodierung und Responsive Design -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Seitentitel -->
+  <title>Login</title>
+  <!-- Verknüpfung mit dem externen Stylesheet -->
+  <link rel="stylesheet" href="styles/styleLogin.css">
+  <!-- Verknüpfung mit Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigationsleiste -->
+    <nav>
+        <div class="nav-links" id="navLinks">  
+            <!-- Liste der Navigationslinks -->
+            <ul>
+              <!-- Link zur Startseite -->
+              <li><a href="index.html">Startseite</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Header-Bereich -->
+    <header>
+        <!-- Überschrift im Header -->
+        <div id="header-text"><h3>Finde die beste KI-Anwendung für dich</h3></div>
+        <!-- Suchfeld im Header -->
+        <div id="header-search">
+          <input type="search" id="suche" placeholder="Suche..." />
+        </div>
+      </header>
+      <!-- Abschnitt für Login und Registrierung -->
+      <section>
+        <!-- Container für den Login-Bereich -->
+        <div class="login-container">
+          <!-- Formular für den Login -->
+          <form id="login-form">
+            <h2>Login</h2>
+            <!-- Feld für den Benutzernamen -->
+            <label for="username">Benutzername:</label>
+            <input type="text" id="username" name="username" required>
+            <!-- Feld für das Passwort -->
+            <label for="password">Passwort:</label>
+            <input type="password" id="password" name="password" required>
+            <!-- Button zum Einloggen -->
+            <button type="submit">Login</button>
+          </form>
+          <!-- Trennlinie zwischen Login und Registrierungsformular -->
+          <div class="separator"></div>
+          <!-- Formular für die Registrierung -->
+          <form>
+            <h2>Registrieren</h2>
+            <!-- Anweisung für die Registrierung -->
+            <p> Für die Registrierung kontaktieren Sie bitte</p>
+            <!-- Feld für die E-Mail-Adresse -->
+            <p>E-Mail Adresse</p>
+          </form>
+        </div>
+      </section>
+</body>
+</html>

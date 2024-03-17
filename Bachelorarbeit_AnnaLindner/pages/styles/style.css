@@ -1,0 +1,176 @@
+/* Setze Standard-Stile für alle Elemente zurück */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+/* Hintergrundfarbe für den gesamten Body festlegen */
+body {
+  background-color: #d4d9d4;
+}
+
+/* Stil für den Header */
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  color: #5b7673;
+}
+
+/* Stil für die Navigation */
+nav {
+  display: flex;
+  padding: 2% 4%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5b7673;
+}
+
+/* Stil für Überschriften */
+h4 {
+  font-size: 1.3rem;
+}
+
+/* Stil für die Navigationslinks */
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 1px 8px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.nav-links .fa {
+  display: none;
+}
+
+/* Stil für den Hauptinhalt */
+.l {
+  margin-top: 5%;
+  margin-left: -2.1%;
+  width: 100%;
+  background: #d4d9d4;
+}
+
+.start {
+  width: 90%;
+  margin: auto;
+  margin-top: 2%;
+  margin-bottom: 7%;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/* Stil für Hexagone */
+.hexagon {
+  width: 150px;
+  height: 100px;
+  background-color: #5b7673;
+  position: relative;
+  margin-bottom: -2%;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+}
+
+.hexagon:before {
+  left: 0px;
+  top: -35px;
+  border-bottom: 35px solid #5b7673;
+}
+
+.hexagon:after {
+  left: 1px;
+  bottom: -35px;
+  border-top: 35px solid #5b7673;
+}
+
+/* Stil für die Reihen */
+.row0 {
+  margin-top: 5%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: center;
+}
+
+.row0 .start-col {
+  margin-right: 10px;
+}
+
+.row0 .start-col:last-child {
+  margin-right: 0;
+}
+
+/* Stil für spezielle Elemente */
+.sp {
+  cursor: pointer;
+  position: relative;
+  color: #ffffff;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
+/* Stil für Hover-Effekt auf Hexagone */
+.hexagon:hover {
+  box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.4);
+}
+
+/* Stil für Links innerhalb der Hexagone */
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Media Query für Bildschirme mit einer Mindestbreite von 45em */
+@media (min-width: 45em) {
+  header {
+    padding: 1em 5%;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  nav li {
+    font-size: 1em;
+  }
+}

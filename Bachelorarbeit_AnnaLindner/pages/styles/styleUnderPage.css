@@ -1,0 +1,136 @@
+/* Setzen der Standard-Margen, Polsterung und Schriftart für alle Elemente */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Be Vietnam Pro", sans-serif;
+}
+
+/* Stil für den Body mit Hintergrundfarbe und Abstand vom oberen Rand */
+body {
+  background-color: #d4d9d4;
+  margin: 0;
+  padding-top: 8em; 
+  position: relative;
+}
+
+/* Stil für das fixierte Header-Element */
+.top {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  z-index: 100; 
+}
+
+/* Stil für die Kopfzeile */
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  color: #5b7673;
+}
+
+/* Stil für die Hauptnavigation */
+nav {
+  display: flex;
+  padding: 2% 4%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5b7673;
+}
+
+/* Stil für die Überschrift */
+h3 {
+  font-size: 1.3rem;
+}
+
+/* Stil für die Navigationselemente */
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 1px 8px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 1px;
+  background: #ffffff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+nav .fa {
+  display: none;
+}
+
+/* Stil für die Sektion */
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Stil für einzelne Blöcke */
+.block {
+  width: 45%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  margin-top: 3%;
+}
+
+.block h2 {
+  color: #333;
+}
+
+.block h4 {
+  padding-bottom: 3%;
+  font-size: 1.15rem;
+}
+
+.block p {
+  width: 80%;
+  padding-top: 2%;
+  font-size: 0.97rem;
+  color: #666;
+  text-align: justify;
+}
+
+/* Stil für das Suchfeld in der Kopfleiste */
+#header-search input[type="search"] {
+  margin-left: 5%;
+  font-size: 1.1em;
+}
+
+/* Medienabfrage für größere Bildschirme */
+@media (min-width: 45em) {
+  header {
+    padding: 1em 5%;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  nav li {
+    font-size: 1em;
+  }
+}

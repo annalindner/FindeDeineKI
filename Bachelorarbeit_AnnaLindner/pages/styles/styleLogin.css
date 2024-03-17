@@ -1,0 +1,123 @@
+/* Setze allgemeine Styles für alle Elemente zurück */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style für den Body */
+body {
+  font-family: 'Be Vietnam Pro', sans-serif;
+  background-color: #dddcd6;
+}
+
+/* Styles für den Kopfzeile */
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+}
+
+/* Styles für die Navigationsleiste */
+nav {
+  display: flex;
+  padding: 2% 4%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b9bab9;
+}
+
+/* Styles für die Navigationslinks */
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 1px 8px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Pseudo-Element für die Hover-Effekte der Navigationslinks */
+.nav-links ul li::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #020202;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+/* Verstecke das Font Awesome Symbol in der Navigation */
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+nav .fa {
+  display: none;
+}
+
+/* Style für das Login-Container-Element */
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10%;
+}
+
+/* Style für das Login-Formular */
+.login-container {
+  display: flex;
+}
+
+form {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style für den Titel des Login-Formulars */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Style für die Labels im Login-Formular */
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Style für die Eingabefelder im Login-Formular */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+/* Style für den Button im Login-Formular */
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style für den Trennstrich im Login-Formular */
+.separator {
+  width: 20px;
+}
