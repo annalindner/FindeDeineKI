@@ -1,6 +1,6 @@
 # FindeDeineKI
 
-Dies ist eine Webanwendung die im Zusammenhang mit der Bachelorarbeit: "Einsatz und Nutzen von KI-Anwendungen im Bildungswesen" entstanden ist. Diese ermöglicht es Benutzern, KI-Anwendungen basierend auf ihrer Zugehörigkeit auszuwählen und Informationen zu jedem Modell anzuzeigen. Zusätzlich können KI-Anwendugen in einer Datenbank einpflegt werden.
+Dies ist eine Webanwendung, die im Zusammenhang mit der Bachelorarbeit: "Einsatz und Nutzen von KI-Anwendungen im Bildungswesen" entstanden ist. Sie ermöglicht es, Benutzern KI-Anwendungen basierend auf ihrer Zugehörigkeit auszuwählen und Informationen zu jedem Modell anzuzeigen. Zusätzlich können KI-Anwendugen in einer Datenbank einpflegt werden.
 
 
 
@@ -8,7 +8,7 @@ Dies ist eine Webanwendung die im Zusammenhang mit der Bachelorarbeit: "Einsatz 
 
 Um die Anwendung auszuführen müssen folgende Schritte durchgeführt werden:
 
-1. Klonen Sie das Repository mit dem Befehl `git clone` in Ihr lokales Verzeichnis.
+1. Klonen Sie das Repository mit dem Befehl `git clone https://github.com/annalindner/FindeDeineKI.git` in Ihr lokales Verzeichnis.
 2. Node.js muss auf Ihrem System installiert sein (https://nodejs.org/).
 3. Entnehmen Sie die Benutzerdaten der Bachelorarbeit und fügen Sie diese in app.js ein.
 
